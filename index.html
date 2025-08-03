@@ -1,0 +1,3356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St.Joseph's Convent Higher Secondary School,Chittranjan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+   
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-scroll { animation: scroll 30s linear infinite; }
+        .page { display: none; }
+        .page.active { display: block; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 200px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1000; border-radius: 8px; top: 100%; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .dropdown-content a { color: #374151; padding: 12px 16px; text-decoration: none; display: block; transition: background-color 0.3s; }
+        .dropdown-content a:hover { background-color: #f3f4f6; }
+
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white  shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center">
+        <img src="https://sjccrj.org/images/logo.png" alt="Logo" class="w-24 h-24 mr-3 "class="max-w-full h-auto">
+ <div class="text-center">
+        <span class="text-white font-bold text-2xl text-gray-800 cursor-pointer" onclick="showPage('home')">St. Joseph's Convent Higher Secondary School,Chittranjan</span>
+      
+ <div class="flex flex-col">
+                            <span class="text-white font-bold text-xl text-gray-800 leading-tight">Under The Catholic Diocese of Asansol Educational Trust
+</span>
+                            <span class="text-white text-sm text-gray-500">Affiliated to the Council of ICSE & ISC Examination, New Delhi</span>
+                        </div>                                      
+        </div>
+ </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="flex items-center space-x-6">
+                        <a href="#" onclick="showPage('home')" class="text-white nav-link text-blue-600 font-medium px-3 py-2 rounded-md">Home</a>
+                        
+                        <!-- About Dropdown -->
+                        <div class="dropdown">
+                            <a href="#" onclick="showPage('about')" class="text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">About us▼</a>
+                            <div class="dropdown-content">
+  <a href="#" onclick="showPage('bishop-message')">Bishop's Message</a>
+
+                                <a href="#" onclick="showPage('principal-message')">Principal's Message</a>
+                                <a href="#" onclick="showPage('our-institution')">Our Institution</a>
+                                <a href="#" onclick="showPage('our-inspiration')">Our Inspiration</a>
+                                <a href="#" onclick="showPage('our-aim')">Our Aim</a>
+                                <a href="#" onclick="showPage('our-mission')">Our Mission</a>
+                                <a href="#" onclick="showPage('our-prayer')">Our Prayer</a>
+                                <a href="#" onclick="showPage('commandments')">School Commandments</a>
+                            </div>
+                        </div>
+
+                        <!-- School Dropdown -->
+                        <div class="dropdown">
+                            <a href="#" onclick="showPage('school')" class="text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Our School ▼</a>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="showPage('admission')">Admission</a>
+                                <a href="#" onclick="showPage('curriculum')">Curriculum</a>
+                                <a href="#" onclick="showPage('activities')">Co-Curricular Activities</a>
+                                <a href="#" onclick="showPage('elearning')">E-Learning</a>
+                                <a href="#" onclick="showPage('regulations')">Regulations</a>
+                                <a href="#" onclick="showPage('school-hours')">School Hours</a>
+                                <a href="#" onclick="showPage('uniform')">School Uniform</a>
+                                <a href="#" onclick="showPage('leadership')">Leadership</a>
+                                <a href="#" onclick="showPage('vacations')">Vacations</a>
+                                <a href="#" onclick="showPage('principals-helm')">Principals at the Helm</a>
+                                <a href="#" onclick="showPage('icse-toppers')">I.C.S.E. Toppers</a>
+                                <a href="#" onclick="showPage('isc-toppers')">I.S.C. Toppers</a>
+                            </div>
+                        </div>
+
+                        <a href="#" onclick="showPage('academics')" class="text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Academics</a>
+                        <a href="#" onclick="showPage('events')" class=" text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Events</a>
+                        <a href="#" onclick="showPage('gallery')" class="text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Gallery</a>
+                        <a href="#" onclick="showPage('contact')" class="text-white nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 p-3">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#" onclick="showPage('home')" class="block px-3 py-2 text-blue-600 font-medium">Home</a>
+               
+                 <!-- About Dropdown -->
+                        <div class="dropdown">
+                            <a href="#" onclick="showPage('about')" class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">About us▼</a>
+                            <div class="dropdown-content">
+                            <a href="#" onclick="showPage('bishop-message')">Bishop's Message</a>
+
+                                <a href="#" onclick="showPage('principal-message')">Principal's Message</a>
+                                <a href="#" onclick="showPage('our-institution')">Our Institution</a>
+                                <a href="#" onclick="showPage('our-inspiration')">Our Inspiration</a>
+                                <a href="#" onclick="showPage('our-aim')">Our Aim</a>
+                                <a href="#" onclick="showPage('our-mission')">Our Mission</a>
+                                <a href="#" onclick="showPage('our-prayer')">Our Prayer</a>
+                                <a href="#" onclick="showPage('commandments')">School Commandments</a>
+                            </div>
+                        </div>
+
+
+
+
+               <!-- School Dropdown -->
+                        <div class="dropdown">
+
+                            <a href="#" onclick="showPage('school')"class="nav-link text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md transition-colors">Our School ▼</a>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="showPage('admission')">Admission</a>
+                                <a href="#" onclick="showPage('curriculum')">Curriculum</a>
+                                <a href="#" onclick="showPage('activities')">Co-Curricular Activities</a>
+                                <a href="#" onclick="showPage('elearning')">E-Learning</a>
+                                <a href="#" onclick="showPage('regulations')">Regulations</a>
+                                <a href="#" onclick="showPage('school-hours')">School Hours</a>
+                                <a href="#" onclick="showPage('uniform')">School Uniform</a>
+                                <a href="#" onclick="showPage('leadership')">Leadership</a>
+                                <a href="#" onclick="showPage('vacations')">Vacations</a>
+                                <a href="#" onclick="showPage('principals-helm')">Principals at the Helm</a>
+                                <a href="#" onclick="showPage('icse-toppers')">I.C.S.E. Toppers</a>
+                                <a href="#" onclick="showPage('isc-toppers')">I.S.C. Toppers</a>
+                            </div>
+                        </div>
+
+
+               <a href="#" onclick="showPage('academics')" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Academics</a>
+                <a href="#" onclick="showPage('events')" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Events</a>
+                <a href="#" onclick="showPage('gallery')" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Gallery</a>
+                <a href="#" onclick="showPage('contact')" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Notice Section -->
+    <section class="bg-red-600 text-white py-3 overflow-hidden">
+        <div class="whitespace-nowrap">
+            <div class="inline-block animate-scroll">
+                <span class="mx-8">🔔 Admission Open for Academic Year 2025-26 - Apply Now!</span>
+                <span class="mx-8">📅 Parent-Teacher Meeting scheduled for July 22nd</span>
+                <span class="mx-8">🏆 Congratulations to our ICSE Toppers 2025!</span>
+                <span class="mx-8">📍Raksha Bandhan August 9</span>
+                <span class="mx-8">🚩Independence Day on August 15th</span>
+                <span class="mx-8">🔔 Admission Open for Academic Year 2025-26 - Apply Now!</span>
+                <span class="mx-8">📅 Parent-Teacher Meeting scheduled for July 22nd</span>
+                <span class="mx-8">🏆 Congratulations to our ICSE Toppers 2025!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOME PAGE -->
+    <div id="home-page" class="page active">
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-white text-4xl md:text-6xl font-bold mb-6">Welcome to St.Joseph's Convent Higher Secondary School</h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">Nurturing young minds for a brighter tomorrow</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="showPage('contact')" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                            Schedule a Visit
+                        </button>
+                        <button onclick="showPage('about')" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+ <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .notice-board {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+
+    .notice-header {
+      background-color: #ff6f61;
+      color: white;
+      padding: 15px;
+      font-size: 1.5em;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .notice-content {
+      height: 250px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .notices {
+      display: flex;
+      flex-direction: column;
+      animation: scroll-up 15s linear infinite;
+    }
+
+    .notice {
+      padding: 10px 20px;
+      border-bottom: 1px dashed #fff;
+      color: #2d2d2d;
+      background: rgba(255,255,255,0.6);
+      transition: background 0.3s;
+    }
+
+    .notice:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    @keyframes scroll-up {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .notice-board {
+        max-width: 90%;
+      }
+    }
+  </style>
+    <div class="notice-board">
+  <div class="notice-header">🗓️ Notice Board</div>
+  <div class="notice-content">
+    <div class="notices">
+      <div class="notice">🔔 School reopens on 5th August</div>
+      <div class="notice">📢 Parent-Teacher Meeting on 10th August</div>
+      <div class="notice">🎉 Independence Day celebration on 15th August</div>
+      <div class="notice">📝 Half-yearly exams start from 20th September</div>
+      <div class="notice">🚫 No classes on Raksha Bandhan – 19th August</div>
+      <div class="notice">📚 New books are available in the library</div>
+    </div>
+  </div>
+</div>
+ <div class="card-hover bg-gradient-to-br from-white-400 to-white-400 text-white p-24 rounded-sm text-center">
+<img src="C:\Users\USER\OneDrive\Pictures\Screenshots\Screenshot 2025-08-03 102349.png"></img>
+</div>
+        <!-- Quick Info Cards -->
+        <section class="py-16 bg-white">
+  <div class="card-hover bg-gradient-to-br from-pink-400 to-pink-600 text-white p-8 rounded-xl text-center">
+<h2 class="text-center text-4xl font-bold mb-4">Modern Technological Facilities</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card-hover bg-gradient-to-br from-green-400 to-green-600 text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl mb-4">🖥️</div>
+                        <h3 class="text-2xl font-bold mb-2">Smart-Classes
+</h3>
+                        <p class="text-green-100">Consisting animations, graphics, audio and video</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-purple-400 to-purple-600 text-white p-8 rounded-xl text-center">
+                        <div class="text-4xl mb-4"></div>
+                        <h3 class="text-2xl font-bold mb-2">Library
+                        </h3>
+                        <p class="text-purple-100">The Library holds materials to serve the whole students &                            staff.</p>
+                    </div>
+                    <div class="card-hover bg-gradient-to-br from-orange-400 to-orange-600 text-white p-8    rounded-xl text-center">
+                        <div class="text-4xl mb-4">💻</div>
+                        <h3 class="text-2xl font-bold mb-2">Computer Lab
+                       </h3>
+                        <p class="text-orange-100">To make the students aware about needs and use of Computer</p>
+                    </div>
+ <div class="card-hover bg-gradient-to-br from-blue-400 to-blue-600 text-white p-8    rounded-xl text-center">
+
+ <div class="text-4xl mb-4">🔔</div>
+                        <h4 class="text-2xl font-bold mb-2">SMS Notification
+
+                       </h4>
+                        <p class="text-blue-100">Parents will receive news/notices via SMS Service</p>
+                    </div>
+                    
+ <div class="card-hover bg-gradient-to-br from-cyan-400 to-cyan-600 text-white p-8    rounded-xl text-center">
+
+ <div class="text-4xl mb-4">🪪</div>
+                        <h4 class="text-2xl font-bold mb-2">RFID Attendance
+
+                       </h4>
+                        <p class="text-blue-100">ID Card is used to make attendance and alert parent via   sms</p>
+                    </div>
+  
+ <div class="card-hover bg-gradient-to-br from-indigo-400 to-indigo-600 text-white p-8    rounded-xl text-center">
+
+ <div class="text-4xl mb-4">👥</div>
+                        <h4 class="text-2xl font-bold mb-2">Online Portal
+
+
+                       </h4>
+                        <p class="text-blue-100">Mobile App for information updates of students/staff</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Quick Access</h2>
+                    <p class="text-lg text-gray-600">Find what you're looking for</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <button onclick="showPage('admission')" class="bg-white p-6 rounded-xl shadow-lg card-hover text-left">
+                        <div class="text-3xl mb-4">📝</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Admissions</h3>
+                        <p class="text-gray-600">Apply for enrollment</p>
+                    </button>
+                    <button onclick="showPage('curriculum')" class="bg-white p-6 rounded-xl shadow-lg card-hover text-left">
+                        <div class="text-3xl mb-4">📚</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Curriculum</h3>
+                        <p class="text-gray-600">Academic programs</p>
+                    </button>
+                    <button onclick="showPage('activities')" class="bg-white p-6 rounded-xl shadow-lg card-hover text-left">
+                        <div class="text-3xl mb-4">🎭</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Activities</h3>
+                        <p class="text-gray-600">Co-curricular programs</p>
+                    </button>
+                    <button onclick="showPage('elearning')" class="bg-white p-6 rounded-xl shadow-lg card-hover text-left">
+                        <div class="text-3xl mb-4">💻</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Learning</h3>
+                        <p class="text-gray-600">Digital resources</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">About Our School</h1>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                     St. Joseph’s Convent Higher Secondary School is a Catholic Institution established by the CHURCH. Its administration is presently entrusted by the Catholic Diocese of Asansol to the Carmelite Sisters of St. Teresa (CSST) which runs well established schools in India.
+                    </p>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-12">
+                    <button onclick="showPage('principal-message')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">👩‍🏫</div>
+                        <div class="text-sm font-medium text-gray-800">Principal's Message</div>
+                    </button>
+                    <button onclick="showPage('our-institution')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🏛️</div>
+                        <div class="text-sm font-medium text-gray-800">Our Institution</div>
+                    </button>
+                    <button onclick="showPage('our-inspiration')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">💡</div>
+                        <div class="text-sm font-medium text-gray-800">Our Inspiration</div>
+                    </button>
+                    <button onclick="showPage('our-aim')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🎯</div>
+                        <div class="text-sm font-medium text-gray-800">Our Aim</div>
+                    </button>
+                    <button onclick="showPage('our-mission')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🚀</div>
+                        <div class="text-sm font-medium text-gray-800">Our Mission</div>
+                    </button>
+                    <button onclick="showPage('our-prayer')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🙏</div>
+                        <div class="text-sm font-medium text-gray-800">Our Prayer</div>
+                    </button>
+                    <button onclick="showPage('commandments')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">📜</div>
+                        <div class="text-sm font-medium text-gray-800">Commandments</div>
+                    </button>
+                </div>
+
+                <!-- Overview Content -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Welcome to St.Joseph's Convent Higher Secondary School</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        At St.Joseph's Convent Higher Secondary School, we believe that every child has the potential to achieve greatness. 
+                        Our dedicated faculty and staff work tirelessly to create an environment where students 
+                        can thrive academically, socially, and emotionally.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                         We are committed to fostering critical 
+                        thinking, creativity, and character development in all our students.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                               <div class="text-center">
+                            <div class="text-3xl font-bold text-green-600 mb-2">1000+</div>
+                            <div class="text-gray-600">Happy Students</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
+                            <div class="text-gray-600">Dedicated Teachers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- BISHOP'S MESSAGE PAGE -->
+    <div id="bishop-message-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Bishop's Message</h1>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class= "bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-xl text-center">
+ <div class="bg-white p-6 rounded-lg shadow-md w-[300px]">
+                                <div class=" mb-4">
+<img src="C:\Users\USER\OneDrive\Pictures\Screenshots\Screenshot 2025-08-03 104642.png"></div>
+
+
+
+
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Bishop Ellas Frank</h3>
+                                                           </div>
+
+                        </div>
+                        <div>
+                                                       <div class="space-y-4 text-gray-700">
+                                <p class="text-lg leading-relaxed">
+                                    
+
+Dear Students, Teachers, Non-Teaching Staff, Parents/Guardians of the Students and CLW authorities,
+                                </p>
+                                <p class="leading-relaxed">
+                              Probably none of you know me, for the obvious reason, this being my first visit to the school. I am grateful to Sr Priyanka and Sr Asha Agnes for inviting me to visit the school and meet you.<br>
+St Joseph’s Schools, both CBSE and ICSE, belong to the Education Trust of the Catholic Diocese of Asansol, of which, at present, I am the president. You are not familiar with the dress I am wearing: it is the official dress of a bishop. The Catholic Diocese of Asansol is one of the eight dioceses in West Bengal and consists of East and West Burdwan districts and parts of Birbhum and Bankura districts. Every diocese has a bishop as its head.
+This month we have important celebrations, on 1st November, we Catholic Christians celebrated All Saints day, that is all our people who have died and are in heaven, we rejoice and thank God for them. On the 2nd we prayed for all the deceased who are not yet in heaven that the bad things they did while on earth may be forgiven to them and they too may be in heaven.<br>
+On coming Saturday, it is Deepavali, the feast of light; in Bengal it is Kali Puja. Then towards the end of the month, on the 27th, it is Guru Nanak Jayanti. I wish to take this opportunity to wish our Hindu students and their parents, teaching and non-teaching staff, making my own the message given by the Vatican office for Interreligious Dialogue to all the followers of Hindu religion: “May God, supreme Light, illumine your hearts and minds, bless your homes and neighbourhoods, and fill your lives with peace and happiness!” (the full message can be read on: www.dioceseofasansol.org). Then to our brothers and sisters of Sikh religion, my prayer is: May this festive event bring you joy and peace and help enhance the spirit of unity and solidarity in your families and communities! (from the Vatican message given to those of Sikh religion on the occasion of Guru Nanak Prakash Divas).<br>
+Now, coming to us, you come every day to this beautiful school, but what do you do at school? You come to study, right? Perhaps, most parents want you to study well, get good marks, complete higher studies and then get good jobs, right? The school is not just a place for studying, it is also a place of learning. What is the difference between studying and learning? Studying is gaining knowledge of subjects, but learning is gaining knowledge through experience, observation as well as studying the subjects.
+I wish to draw your attention to one thing that is fundamental to achieve success in life: it is about peace. We must promote peace, not hatred, not division. To promote peace we must respect others, no matter what their religion is, what their social status is, no matter what their skin tone or complexion is, no matter what they eat at home. Respecting others means considering them as our brothers and sisters in the human family.
+Peace is not possible without protecting our mother earth. When we throw trash here and there, when no recycling is done, we are polluting our mother earth. When we waste water, when we waste electricity we are harming the earth. There are so many things we can do to protect our planet earth.<br>
+I invite you, today, my dear children to be promoters of peace for a better future.   
+
+                                </p>
+                                <p class="text-lg leading-relaxed font-medium">
+                                   
+                                Thank you for your kind attention.<br>
+                                 Bishop Elias Frank<br>
+				The Catholic Diocese of Asansol
+
+                                    
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- PRINCIPAL'S MESSAGE PAGE -->
+    <div id="principal-message-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Principal's Message</h1>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl shadow-lg p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="bg-gradient-to-br from-blue-100 to-purple-100 p-6 rounded-xl text-center">
+                                <div class="text-4xl mb-4"><img src="C:\Users\USER\Downloads\image\download.jpeg"class="w-full h-auto object-cover"></div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Sr. Asha Agnes CSST</h3>
+                                <p class="text-gray-600 mb-2">Principal</p>
+                                <p class="text-sm text-gray-500">St.Joseph's Convent Higher Secondary School</p>
+                                <p class="text-sm text-gray-500">Chittranjan</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 class="text-3xl font-bold text-gray-800 mb-6">A Message from Our Principal</h2>
+                            <div class="space-y-4 text-gray-700">
+                                <p class="text-lg leading-relaxed">
+                                    Dear Josephites,
+                                    Cordial Greetings!!
+                                </p>
+                                <p class="leading-relaxed">
+                                 
+It is indeed a matter of extreme pride and honour for me to join this school as the Principal which is known for its wonderful academic environment and an excellent student body. As the new Principal, I would like to express my heartfelt thanks and gratitude to the members of the Managing Committee, Teachers, Staff and Students for extending a cordial welcome to me when I officially took the responsibility of Principalship of this prestigious school. After taking charge, I observed that this school is not only one of the best in the locality, but is committed to provide all round development to its students. Besides providing an excellent academic atmosphere, the school also nurtures students with good and proper attitude and values. What struck me most about this school was the countless opportunities that it provides to its students to freely take part in various scholastic and co scholastic activities within and outside of school to broaden the horizon the students. Being the Principal of this school, I would ensure that more such curricular and co curricular activities get conducted so that our students continue to keep the flame of St Joseph aglow and as this school has continued to live up to the expectations of the parents and the students, I assure you, it will continue to do the same in the forthcoming years as well. Transitions are never easy, however as a team if we work together this journey of transition will be much easier. I look forward to each and everyone's Cooperation and support for smooth functioning of the school.
+May God continue to shower his unending blessings upon all the members of the Josephites family.
+                                </p>
+                                <p class="text-lg leading-relaxed font-medium">
+                                   
+                                Thank you.<br>
+			     Sr. Asha Agnes<br>
+                                Principal<br>
+                                    
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OUR INSTITUTION PAGE -->
+    <div id="our-institution-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Institution</h1>
+                    <p class="text-lg text-gray-600">A beacon of educational excellence since 1974</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <div class="text-6xl mb-6 text-center">🏛️</div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Institution</h2>
+                        <p>
+● St. Joseph's Convent Higher Secondary School is a Catholic Institution established by the CHURCH. Its            administration is presently entrusted by the Catholic Diocese of Asansol to the Carmelite Sisters of St. Teresa (CSST) which runs well established schools in India.
+</p>
+<p>
+● The Institution was established in the year 1952 under the rights and powers granted to religious and linguistic minorities by the Constitution of India (Art. 20 and 30). The Catholic Diocese of Asansol is the Founder Body in succession of this Institution.
+</p>
+<p>
+ ●The school is recognized by the Anglo-Indian Board of West Bengal and affiliated to the Indian Council for Secondary Education, New Delhi (ICSE) & ISC.
+</p>
+<p>
+ ●West Bengal has given "No Objection Certificate" (NOC) for its approval.
+</p>
+<p>
+ ●The Railway authorities have given the land on lease for the school, and the buildings and infrastructure are provided by the Church.
+</p>
+<p>
+ ●The medium of instruction of this institution is English.
+</p>
+<p>
+ ●The institution is co-educational.
+
+
+                        </p>
+                    </div>
+                                 </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-lg">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Our Core Values</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🌟</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">God Experience</h3>
+                                                  </div>
+                        <div class="text-center">
+                            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">❤️</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Truth,Love,Justice and Peace</h3>
+                                                   </div>
+                        <div class="text-center">
+                            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">💙</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Compasionate Love for all</h3>
+                                                   </div>
+                                               </div>
+                        <div class="text-center">
+                            <div class="bg-purpel-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🤝</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Hard work & Obedience,Communion,collaboration,Team Spirit</h3>
+                                                   </div>
+                                               </div>
+                        <div class="text-center">
+                            <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Excellence in developing each one's unique potentialities</h3>
+                                                   </div>
+                                                     </div>
+                        <div class="text-center">
+                            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🧘‍♂️</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Simplicity of Lifestyle & Dignity of Labour</h3>
+                                                   </div>
+
+
+
+                        <div class="text-center">
+                            <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🙏</span>
+                            </div>
+                            <h3 class="font-bold text-gray-800 mb-2">Respect for Life,Nature,Culture,Religions,and Love for the Nation</h3>
+                                                   </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OUR INSPIRATION PAGE -->
+    <div id="our-inspiration-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Inspiration</h1>
+                    <p class="text-lg text-gray-600">The driving force behind our educational mission</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl shadow-lg mb-12">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-4">✝️</div>
+                                          </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div>
+                            
+                            <p class="text-gray-700 mb-4">
+                            
+ST. JOSEPH, the patron of our school is the husband of virgin Mary and the foster father of Jesus Christ, the Son of God. According to the Holy Bible he was a God fearing man, obedient to the divine inspiration revealed through dreams by God. He is known as the just, obedient, upright and hardworking man who toiled for the family.
+
+                   </p>
+                            <p class="text-gray-700 mb-4">
+                              ST. JOSEPH is a model of obedience, hard-work, justice and uprightness for all those who come and study here. He takes care of all and intercedes for those who come to the portals of St. Joseph's.                             </p>
+                        </div>
+                        
+                     
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl mb-4">🌟</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Student Success</h3>
+                        <p class="text-gray-600">Every achievement, big or small, inspires us to continue our mission</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Community Support</h3>
+                        <p class="text-gray-600">The trust and partnership of families motivates our dedication</p>
+                    </div>
+                    <div class="bg-purple-50 p-6 rounded-xl text-center">
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Future Impact</h3>
+                        <p class="text-gray-600">Knowing we're shaping tomorrow's world leaders drives our passion</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OUR AIM PAGE -->
+    <div id="our-aim-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Aim</h1>
+                    <p class="text-lg text-gray-600">Focused goals for educational excellence</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-12">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-4">🎯</div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Primary Aim</h2>
+                        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                            To nurture confident, compassionate, and capable individuals who contribute positively 
+                            to society and excel in their chosen paths while maintaining strong moral foundations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                                             <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-blue-700 mr-3 mt-1">•</span>
+                                <span class="text-2xl font-bold text-gray-600">While the prime purpose of the establishment of this catholic School is the education of Catholic Children in Catholic Faith and Principles; children of other faiths irrespective of caste,creed or community are also admitted.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-700 mr-3 mt-1">•</span>
+                                <span class="text-2xl font-bold text-gray-600">As a Catholic School, it is a Learning Community which has Christ as its central motivating force.His values are expressed in the Beatitudes and summed up in the virtues of love,sincerity,jusice and freedom will permeate the atmosphere that the children of all social backgrounds,even the most deprived and of all the religions,fell welcome in the loving warmth which cherishes even as it challenges.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">•</span>
+                                <span class="text-2xl font-bold text-gray-700">The School fosters the all round growth and development of students to their fullest potential-Spiritual,intellectual,cultural and physical.It guides them in the development of a sound value system and in culcates in them a deep love and appreciation for their culture and country.The school within their own cultural milieu to refect on  their life and to develop not only in knowledge and skills but also in that wisdom which is the fruit of life and its lessons.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1">•</span>
+                                <span class="text-2xl font-bold text-gray-700">The education imparted is characterized by thoroughness,high principles and freedom.The students are helped to grow in responsibility,self reliance and human maturity so that they find meaning and purpose in their lives and are inspired to live and work for building up a just and fraternal society.Hence,the idea of service is set before them so that they are trained to be concerned for others,to be aware of their needs and to make sacrifices when necessary,to share what they have with the less privileged.Efforts and copperation will therefore be, needed to install a sense of community rather than a spirit of indiviual competition.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+        </section>
+    </div>
+
+    <!-- OUR MISSION PAGE -->
+    <div id="our-mission-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Mission</h1>
+                    <p class="text-lg text-gray-600">Our commitment to educational excellence</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl shadow-lg mb-12">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-4">🚀</div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Mission Statement</h2>
+                        <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                            "Transformative education for fullness of life ."
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Focuses on:</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">❤️</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Awakening the heart with goodness and godliness</h4>
+                           
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">🌼</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Flowering the minds with clear perciption</h4>
+                                                    </div>
+                        <div class="text-center">
+                            <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-2xl">✍️</span>
+                            </div>
+                            <h4 class="font-bold text-gray-800 mb-2">Wisdom and discernment through knowledge and understanding</h4>
+                                                   </div>
+ <p class="  italic text-xl ">It is wisdom that guides the child to make one's responsible place in the society,caring for the whole human family of which he/she is a part. Ultimately humanity is one 
+and this small planet is our home and we take to our ressponsibility seriously to protect this home for our future generations. </p>
+               </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- OUR PRAYER PAGE -->
+    <div id="our-prayer-page" class="page">
+        <section class="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Prayer</h1>
+                    <p class="text-lg text-gray-600">A daily reminder of our values and aspirations</p>
+                </div>
+                
+                <div class="bg-white p-12 rounded-xl shadow-lg max-w-4xl mx-auto">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-6">🙏</div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">The Prayer of the Josephites</h2>
+                    </div>
+                    
+                    <div class="text-center text-gray-700 text-lg leading-relaxed space-y-4">
+                        <p class="italic font-semibold text-xl ">O God,</p>
+                        <p class="italic font-semibold text-xl">Our Father and Mother,</p>
+                        <p class="italic font-semibold text-xl">As we begin this new day,</p>
+                        <p class="italic font-semibold text-xl">We are thankful to YOU for the</p>
+                        <p class="italic font-semibold text-xl">precious gift of our life</p>
+                        <p class="italic font-semibold text-xl">May we always do all that pleases in</p>
+                        <p class="italic font-semibold text-xl">Your sight!</p>
+                        <p class="italic font-semibold text-xl">Dispel from us every form of darkness</p>
+                        <p class="italic font-semibold text-xl">and</p>
+                        <p class="italic font-semibold text-xl">Lead us on to the fount of truth and</p>
+                        <p class="italic font-semibold text-xl">fullness of life.</p>
+                        <p class="italic font-semibold text-xl">May we dedicate all our energies for</p>
+                        <p class="italic font-semibold text-xl">excellence in every field of study</p>
+<p class="italic font-semibold text-xl">And support each other in developing</p>
+<p class="italic font-semibold text-xl">all our talents!</p>
+<p class="italic font-semibold text-xl">Teach us to be mature & self-</p>
+<p class="italic font-semibold text-xl">disciplined</p>
+<p class="italic font-semibold text-xl">as your good sons and daughters, and</p>
+<p class="italic font-semibold text-xl">become responsible citizens of our</p>
+<p class="italic font-semibold text-xl">nation</p>
+<p class="italic font-semibold text-xl">upholding the dignity and equality</p>
+<p class="italic font-semibold text-xl">of every one, everywhere.</p>
+<p class="italic font-semibold text-xl">Guide us always on the right path to</p>
+<p class="italic font-semibold text-xl">promote in our society
+</p>
+<p class="italic font-semibold text-xl">universal fraternity, courageous</p>
+<p class="italic font-semibold text-xl">honesty, genuine freedom</p>
+<p class="italic font-semibold text-xl">and above all selfless love.</p>
+<p class="italic font-semibold text-xl">Make us instruments of your peace in</p>
+<p class="italic font-semibold text-xl">the world.
+</p>
+<p class="italic font-semibold text-xl">May we root out every form of</p>
+<p class="italic font-semibold text-xl">injustice, discrimination,</p>
+<p class="italic font-semibold text-xl">corruption and greed,</p>
+<p class="italic font-semibold text-xl">and be kind defenders of the</p>
+<p class="italic font-semibold text-xl">surrounding nature!</p>
+<p class="italic font-semibold text-xl">Bless O Lord, and reward our parents,</p>
+<p class="italic font-semibold text-xl">teachers & friends,
+</p>
+<p class="italic font-semibold text-xl">who toil so much for our welfare</p>
+<p class="italic font-semibold text-xl">May St. Joseph, our Heavenly Patron,</p>
+<p class="italic font-semibold text-xl">and the true example of selfless</p>
+<p class="italic font-semibold text-xl">generosity,</p>
+<p class="italic font-semibold text-xl">Inspire us & intercede for us!</p>
+<p class="italic font-semibold text-xl">Amen</p>
+                    </div>
+                </div>
+                               </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SCHOOL COMMANDMENTS PAGE -->
+    <div id="commandments-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our School Commandments</h1>
+                    <p class="text-lg text-gray-600">Guiding principles for our school community</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl shadow-lg mb-12">
+                    <div class="text-center mb-8">
+                        <div class="text-8xl mb-4">📜</div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Ten Commandments For JOSEPHITEs</h2>
+                        <p class="text-lg text-gray-600">These principles guide our daily interactions and shape our school culture</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">1</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2"> Always speak in English in the school campus.</h3>
+                                                                  </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">2</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Be good listeners and communicate correct information.</h3>
+                                                                   </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">3</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Be respectful to all especially towards parents and teachers.</h3>                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">4</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Protect the property and good name of the school.</h3>
+                                                                  </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">5</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Be non-violent in words and deeds.</h3>
+                                                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">6</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Cultivate healthy friendship and avoid gossip.</h3>
+                                                                   </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">7</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Learn at least one good hobby.</h3>
+                                                                    </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">8</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Be sincere and avoid unfair means.</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">9</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Be regular, punctual and maintain discipline.</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">10</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">Above all, pray always.</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                                   
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- SCHOOL PAGE -->
+    <div id="school-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our School</h1>
+                  <h1 class="text-1xl md:text-5xl font-bold text-gray-800 mb-4"> Find What You're Looking For</h1>
+</div>
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-12">
+                    <button onclick="showPage('admission')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">📝</div>
+                        <div class="text-sm font-medium text-gray-800">Admisssions</div>
+                    </button>
+                    <button onclick="showPage('curriculum')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">📚</div>
+                        <div class="text-sm font-medium text-gray-800">Curriculum</div>
+                    </button>
+                    <button onclick="showPage('activities')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🎨</div>
+                        <div class="text-sm font-medium text-gray-800">Co-Curriculum activites</div>
+                    </button>
+                    <button onclick="showPage('elearning')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">💻</div>
+                        <div class="text-sm font-medium text-gray-800">E-Learning</div>
+                    </button>
+                    <button onclick="showPage('regulations')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">⚖️</div>
+                        <div class="text-sm font-medium text-gray-800">Regulation</div>
+                    </button>
+                    <button onclick="showPage('school-hours')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🕓</div>
+                        <div class="text-sm font-medium text-gray-800">School Hour</div>
+                    </button>
+                    <button onclick="showPage('uniform')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">👔</div>
+                        <div class="text-sm font-medium text-gray-800">School Uniform</div>
+                    </button>
+  <button onclick="showPage('leadership')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">👑</div>
+                        <div class="text-sm font-medium text-gray-800">Leadership</div>
+                    </button>
+  <button onclick="showPage('vacations')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">⛱️</div>
+                        <div class="text-sm font-medium text-gray-800">Vacations</div>
+                    </button>
+  <button onclick="showPage('principals-helm')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">👤</div>
+                        <div class="text-sm font-medium text-gray-800">Principals at the Helm</div>
+                    </button>
+  <button onclick="showPage('icse-toppers')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🏆</div>
+                        <div class="text-sm font-medium text-gray-800">I.C.S.E Toppers</div>
+                    </button>
+  <button onclick="showPage('isc-toppers')" class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow text-center">
+                        <div class="text-2xl mb-2">🏆</div>
+                        <div class="text-sm font-medium text-gray-800">I.S.C. Toppers</div>
+                    </button>
+                </div>
+
+ </div>          
+  </div>
+
+
+
+
+              
+
+    <!-- ADMISSION PAGE -->
+    <div id="admission-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Admissions</h1>
+                    <p class="text-lg text-gray-600">Join our school community - Applications now open for 2025-26</p>
+                </div>
+                
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+                    <div class="flex items-center">
+                        <div class="text-3xl mr-4">📢</div>
+                        <div>
+                            <h3 class="text-xl font-bold text-blue-800 mb-2">Admission Open for Academic Year 2025-26</h3>
+                            <p class="text-blue-700">Applications are now being accepted. Limited seats available. Apply early to secure your child's future!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Admission Process</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Application Form</h4>
+                                    <p class="text-gray-600 text-sm">Complete and submit the admission application form with required documents</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Document Verification</h4>
+                                    <p class="text-gray-600 text-sm">Submit all required documents for verification and processing</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Assessment & Interview</h4>
+                                    <p class="text-gray-600 text-sm">Age-appropriate assessment and parent-child interview</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Admission Confirmation</h4>
+                                    <p class="text-gray-600 text-sm">Receive admission decision and complete enrollment formalities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Important </h2>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-semibold text-gray-800 mb-1"> Application for admission to class K.G. I on the prescribed form is normally accepted in the months of October, November or December.</h4>
+                                                           </div>
+                            <div class="border-l-4 border-yellow-500 pl-4">
+                                <h4 class="font-semibold text-gray-800 mb-1">At the time of admission, parents must submit to the school office a declaration in writing stating the child's exact Date of Birth and it must be supported by an authenticated extract from the Corporation / Municipality / Gram Panchayat, showing the Date of Birth. Catholic children are required to produce their Baptismal Certificate at the time of admission.</h4>
+                                                            </div>
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-semibold text-gray-800 mb-1"> A pupil who has attended any recognized school can be admitted with a Transfer Certificate from the school last attended. If a pupil comes from a school outside the State of West Bengal, the Transfer Certificate must be countersigned by the Inspector of Schools of the State from which the pupil comes.</h4>                            </div>
+                                                    </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Required Documents</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">For New Admissions</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span><span class="text-gray-700">Birth Certificate (Original + Copy)</span></li>
+                                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span><span class="text-gray-700">Previous School Transfer Certificate</span></li>
+                                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span><span class="text-gray-700">Academic Records/Report Cards</span></li>
+                                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span><span class="text-gray-700">Medical Certificate</span></li>
+                                <li class="flex items-center"><span class="text-green-600 mr-2">✓</span><span class="text-gray-700">Passport Size Photographs (4)</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-4">Parent/Guardian Documents</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span><span class="text-gray-700">Address Proof (Utility Bill/Lease)</span></li>
+                                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span><span class="text-gray-700">Parent ID Proof (Aadhar/Passport)</span></li>
+                                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span><span class="text-gray-700">Income Certificate (if applicable)</span></li>
+                                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span><span class="text-gray-700">Caste Certificate (if applicable)</span></li>
+                                <li class="flex items-center"><span class="text-blue-600 mr-2">✓</span><span class="text-gray-700">Parent Photographs (2 each)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Fee Structure (For New Admission 2025-2026)</h3>
+                        <div class="space-y-3">
+ <h3 class="text-2xl font-bold text-gray-800 mb-4">For class NUR-KGII</h3>
+
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Application Fee:</span>
+                                <span class="font-semibold text-gray-800">₹500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Admission Fee:</span>
+                                <span class="font-semibold text-gray-800">₹4500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Building Fee:</span>
+                                <span class="font-semibold text-gray-800">₹6000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Tution Fee(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹2860*2=₹5720</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">E-Learning(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+<div class="flex justify-between">
+                                <span class="text-gray-700">Annual Fee:</span>
+  <span class="font-semibold text-gray-800">₹5000</span>
+
+
+                        </div>
+
+                        <div class="space-y-3">
+ <h3 class="text-2xl font-bold text-gray-800 mb-4">For class I-V</h3>
+
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Application Fee:</span>
+                                <span class="font-semibold text-gray-800">₹500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Admission Fee:</span>
+                                <span class="font-semibold text-gray-800">₹5000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Building Fee:</span>
+                                <span class="font-semibold text-gray-800">₹6000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Tution Fee(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹3245*2=₹6490</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">E-Learning(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Computer Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+
+<div class="flex justify-between">
+                                <span class="text-gray-700">Annual Fee:</span>
+  <span class="font-semibold text-gray-800">₹5500</span>
+
+
+                        </div>
+
+                        <div class="space-y-3">
+ <h3 class="text-2xl font-bold text-gray-800 mb-4">For class VI && VII</h3>
+
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Application Fee:</span>
+                                <span class="font-semibold text-gray-800">₹500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Admission Fee:</span>
+                                <span class="font-semibold text-gray-800">₹5500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Building Fee:</span>
+                                <span class="font-semibold text-gray-800">₹6000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Tution Fee(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹3355*2=₹6710</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">E-Learning(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+
+                            </div>
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Computer Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+
+<div class="flex justify-between">
+                                <span class="text-gray-700">Annual Fee:</span>
+  <span class="font-semibold text-gray-800">₹5500</span>
+
+                        </div>
+
+                        <div class="space-y-3">
+ <h3 class="text-2xl font-bold text-gray-800 mb-4">For class VIII</h3>
+
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Application Fee:</span>
+                                <span class="font-semibold text-gray-800">₹500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Admission Fee:</span>
+                                <span class="font-semibold text-gray-800">₹6000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Building Fee:</span>
+                                <span class="font-semibold text-gray-800">₹6000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Tution Fee(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹3465*2=₹6930</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">E-Learning(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Computer Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Science Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹300*2=₹600</span>
+                            </div>
+
+
+
+<div class="flex justify-between">
+                                <span class="text-gray-700">Annual Fee:</span>
+  <span class="font-semibold text-gray-800">₹5500</span>
+
+
+                        </div>
+                        <div class="space-y-3">
+ <h3 class="text-2xl font-bold text-gray-800 mb-4">For class IX</h3>
+
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Application Fee:</span>
+                                <span class="font-semibold text-gray-800">₹500</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Admission Fee:</span>
+                                <span class="font-semibold text-gray-800">₹7000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Building Fee:</span>
+                                <span class="font-semibold text-gray-800">₹7000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">Tution Fee(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹3465*2=₹6930</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-700">E-Learning(For Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Computer Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹200*2=₹400</span>
+                            </div>
+
+ <div class="flex justify-between">
+                                <span class="text-gray-700">Science Fee(Two Months):</span>
+                                <span class="font-semibold text-gray-800">₹300*2=₹600</span>
+                            </div>
+
+
+
+                               <div class="flex justify-between">
+                                <span class="text-gray-700">Annual Fee:</span>
+                                <span class="font-semibold text-gray-800">₹5500</span>
+
+
+                              </div>
+ 
+                              </div>
+
+                               </div>
+                            </div>
+                              </div>
+
+                  
+
+
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Contact Admissions</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <span class="text-blue-600 text-xl mr-3">📞</span>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Phone</div>
+                                    <div class="text-gray-600">+91 9547051198</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-600 text-xl mr-3">✉️</span>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Email</div>
+                                    <div class="text-gray-600">sjccrj@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-600 text-xl mr-3">🕐</span>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Office Hours</div>
+                                    <div class="text-gray-600">Mon-Fri: 9:00 AM - 12:30 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <button class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-6">
+                            Schedule School Visit
+                        </button>
+
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+         </section>
+    </div>
+
+    <!-- Additional pages would continue here with similar structure... -->
+    <!-- For brevity, I'll include placeholder pages for the remaining sections -->
+    
+    <div id="curriculum-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Curriculum</h1>
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">1</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2">pupils are prepared for the ICSE Examination (Indian Council for Secondary Education, New Delhi) and the ISC (Indian School Certificate).</h3>
+                                                                  </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">2</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2"> In addition to the subject prescribed by the Board, and Council syllabus, the curriculum includes Religious Instruction (for Catholics), Moral Science (Non-Catholics), Value Education (for all), G.K. for Classes K.G. I to XII.</h3>
+                                                                   </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">3</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2"> Bengali or Hindi as second language is taught from Class K.G. II.</h3>                                </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">4</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2"> Bengali or Hindi as third language is taught from Class V to VIII.</h3>
+                                                                  </div>
+                            </div>
+                            
+                            <div class="flex items-start bg-white p-4 rounded-lg shadow">
+                                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-4 flex-shrink-0">5</span>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 mb-2"> Pupils are also provided audio-video learning through Tata® ClassEdge®.</h3>
+                                                                    </div>
+                            </div>
+                        </div>
+                        
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="activities-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Co-Curricular Activities</h1>
+                    <p class="text-2xl text-gray-600">"Practice as if you were the worst; perform as if you were the best."</p>
+  <p class="text-2xl text-gray-600 font-bold">Co-Curricular Activities are those activities which are opportunities for those budding stars who want to exhibit their multifarous talents.</p>
+  <p class="text-2xl text-gray-600 font-bold">The Co-curricular club of SJCHSS conducts activities such as extempore, elocution, debate, quiz, essay, poetry-writing and creating stories and helps the students to break through the nutshells and gain confidence.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="elearning-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 2xl:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-100 p-8 rounded-2xl">
+
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">E-Learning</h1>
+                    <p class="text-2xl font-bold text-gray-800">"towards excellence & digitization"</p>
+
+                                             <ul class="space-y-3">
+  <div class="text-left">
+                    <p class="text-2xl font-bold text-gray-600">In this age of automation computers are probably the biggest change in education. St. Joseph's Convent Higher Secondary School has upgraded its teaching method by introducing Digi-Classes from the year 2009. It has widened the vision of the teachers as well as the students as every subject is taught through Interactive Board for better understanding and learning of the students. The newly furnished computer labs of both the buildings have opened new doors of knowledge for the students.</p>
+ 
+                            <li class="flex items-start">
+                                <span class="text-blue-700 mr-3 mt-1 text-4xl">       ●</span>
+                                <span class="text-2xl font-bold text-gray-600">Modern technology mingled with education is becoming a characteristic feature of the present educational system.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-700 mr-3 mt-1 text-4xl">●</span>
+                                <span class="text-2xl font-bold text-gray-600"> There was a dire needed for the credible platform which provides quality infrastructure; strong subject material and an environment conducive to optimal learning which would help children improve their academic performance.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 text-4xl">●</span>
+                                <span class="text-2xl font-bold text-gray-600">SJCHSS became the first school in West Bengal to introduce this technology by installing Pearson Digi-Class. Now, we have tied up with Tata® ClassEdge®</span>
+                            </li>
+                            <li class="flex items-start">
+                                                               <span class="text-2xl font-bold text-gray-700">The E-Learning & Digiclass advocates the use of a special software installed on all the laptops connected through Wi-Fi technology to the main server which comes with thousands of learning elements such as animations, videos, 3D interactivity, worksheets etc. which are all designed to ensure superior teaching / learning practices. The Digiclass uses an Electronic Interactive White Board where these audio visual explanations & animations are displayed. Digiclass introduced in our school is going a long way to enhance students' performance by facilitating long time retention and retrieval. Its dynamic and interactive nature encourages active learning and brings the subject to life.
+
+</span>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="regulations-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">School Regulations</h1>
+                    <p class="text-lg text-gray-600">Policies and guidelines</p>
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                     <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                                          <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Students are expected to demonstrate an increasing self-discipline with age and to exercise the freedom given to them responsibly. They should treat all members of the student body and all adults with respect and politeness. They should show gentleness and courtesy to their companions and elders. Refinement of manners, uprightness and self restraint should be the characteristic of every student of the school. Good manners and polite behaviour is a part of education.</h4>
+                                                                    </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Regular attendance at school is in the interest of the student. It builds up a sense of devotion to duty and a habit of regularity and discipline. The students should arrive on time to school. There is a procedure for checking the late comers. Parents' co-operation will be much appreciated to ensure punctuality.</h4>
+                                                                    </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Students who have been absent from class, must have the reason entered in the Regularity Record in the School Calender, stating briefly the cause of the absence or delay. Reasons of a private nature may be submitted in a letter. Leave notes need to be duly signed by the parents or the guardians of the children whose specimen signature is given in the school diary and countersigned by the appropriate school authority.</h4>
+                                                                   </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> A teaching atmosphere is necessary for good teaching. So no outsiders are allowed to visit the classrooms or the teachers without prior permission. Any other activity that does not pertain directly to the actual teaching of the school programme can only be allowed with the explicit permission of the Principal.</h4>
+                                                                  </div>
+   </div>
+  <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">5</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">  Pupils are responsible for the safe custody of their books and belongings which must be marked clearly with their names. The school does not hold responsibility for the loss of any belonging of the pupils.</h4>
+                                                                  </div>
+   </div>
+  <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">6</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">  Any damage to the school property must be remedied by the person responsible for the damage.</h4>
+                                                                  </div>
+   </div>
+  <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">7</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Students are forbidden from bringing transistors, radios, mobile phones, tape recorders, cameras and costly jewellery. No books, periodicals or magazines of any kind other than school and library books may be brought to school.</h4>
+                                                                  </div>
+    </div>
+  <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">8</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Use of tobacco material, smoking or drinking in the school campus is strictly forbidde</h4>
+                                                                  </div>
+   </div>
+  <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-2 mr-4 mt-1">
+                                    <span class="text-blue-600 font-bold text-sm">9</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1"> Any complaint or suggestion regarding pedagogy, curriculum etc. should be made to the teacher concerned or to the Principal.</h4>
+                                                                  </div>
+
+   </div>
+
+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="school-hours-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">School Hours</h1>
+                    <p class="text-lg text-gray-600">Daily schedule and timings</p>
+                </div>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th></th>
+    <th>Summer</th>
+    <th>Winter</th>
+  </tr>
+  <tr>
+    <th>Assembly</th>
+    <th>07:10 am</th>
+    <th>07:40 am</th>
+  </tr>
+  <tr>
+    <th>Class KG I & KG II </th>
+
+    <th>07:10 am-12:00 noon</th>
+    <th>07:40 am-01:00 pm</th>
+  </tr>
+ <tr>
+    <th>Class I-XII</th>
+    <th>07:10 am-1:15 pm</th>
+    <th>07:40 am-01:45 pm</th>
+  </tr>
+ <tr>
+    <th>Recess</th>
+    <th>10:10 am-10:30 am</th>
+    <th>10:40 am-11:00 am</th>
+  </tr>
+
+</table>
+            </div>
+        </section>
+    </div>
+
+    <div id="uniform-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">School Uniform</h1>
+           <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+
+                    <p class="text-lg text-gray-600">Dress code guidelines</p>
+            <div class="space-y-4">
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">For class Nursery & KG I Monday,Tuesday,Thursday and on all the days of examination.</h2>
+ <p class="text-lg text-gray-600">Students will have multi colour(red, green, blue) half pant for Boys and same combination skirt for Girls with red t-shirt for both Boys and Girls.</p>
+ <p class="text-lg text-gray-600 font-bold">(Pant & Skirt should have pleats)</p>
+ <p class="text-lg text-gray-600">●Shoes-Black,Socks-white</p>
+ <p class="text-lg text-gray-600">●Neck Tie & Belt</p>
+ <p class="text-lg text-gray-600 font-bold">On Wednesday and on Days of Activities.</p>
+ <p class="text-lg text-gray-600">●Boys – White Half Pant and Yellow T-Shirt</p>
+ <p class="text-lg text-gray-600">●Girls - Tunic and Yellow T-Shirt.</p>
+ <p class="text-lg text-gray-600 font-bold">On Fridays</p>
+ <p class="text-lg text-gray-600">●Boys- White Half Pant and White Shirt</p>
+ <p class="text-lg text-gray-600">●Girls – White Tunic</p>
+
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">For classes KG-II-III</h2>
+<p class="text-lg text-gray-600 font-bold">Uniform For Boys</p>
+<p class="text-lg text-gray-600 font-bold">Monday,Tuesday,Thursday and on all the days of examination</p>
+<p class="text-lg text-gray-600">Red Check Pant& Cream Shirt</p>
+<p class="text-lg text-gray-600">(Pants should have pleats)</p>
+<p class="text-lg text-gray-600">●Shoes – Black, Socks – White</p>
+<p class="text-lg text-gray-600">●Neck Tie & Belt</p>
+<p class="text-lg text-gray-600 font-bold">On Wednesday and on Days of Activities.</p>
+<p class="text-lg text-gray-600">●Boys of K.G II shall wear – White Half Pant and Yellow T-Shirt</p>
+<p class="text-lg text-gray-600">●Boys from Classes I – III shall wearHouse T – Shirt, White Pant, Canvas Shoes & Socks.</p>
+<p class="text-lg text-gray-600 font-bold">On Friday</p>
+<p class="text-lg text-gray-600">
+Boys of K.G II shall wear -White Half Pant and White Shirt.</p>
+
+<p class="text-lg text-gray-600">●Boys from Classes I-III shall wear -White Shirt, White Pant, Canvas Shoes & Socks.</p>
+<p class="text-lg text-gray-600">◉Boys are not permitted to wear low waist pant</p>
+<p class="text-lg text-gray-600">◉Hair style should be plain (no gels and spikes)
+</p>
+<p class="text-lg text-gray-600">◉Hair should be regularly trimmed (clean crop cut)</p>
+
+
+
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">Uniform of Girls</h2>
+<p class="text-lg text-gray-600 font-bold">Mondays, Tuesdays, Thursdays and on all the days of examination.</p>
+
+<p class="text-lg text-gray-600">●(Skirt should have pleats)</p>
+
+<p class="text-lg text-gray-600">●Shoes – Black, Socks – White</p>
+
+<p class="text-lg text-gray-600">●Neck Tie & Belt</p>
+
+<p class="text-lg text-gray-600 font-bold">On Wednesday and on Days of Activities.</p>
+<p class="text-lg text-gray-600 ">The School has taken initiative to introduce trousers in place of skirts for the girls. Accordingly the new dress code for girls from this year onwards will be :-</p>
+
+<p class="text-lg text-gray-600">●Girls of K.G II shall wear -Tunic and Yellow T-Shirt.</p>
+<p class="text-lg text-gray-600">●Girls from Classes I – III shall wear -</p>
+<p class="text-lg text-gray-600">●House T – Shirt, White Skirt, Canvas Shoes & Socks.</p>
+
+<p class="text-lg text-gray-600 font-bold">On Fridays</p>
+<p class="text-lg text-gray-600">●Girls of K.G II shall wear – White Tunic</p>
+<p class="text-lg text-gray-600">●Girls from Classes I – III shall wear - White Shirt, White Skirt, Canvas Shoes & Socks.</p>
+
+<p class="text-lg text-gray-600">◉All must wear knee length skirt.</p>
+
+<p class="text-lg text-gray-600">◉They are not permitted to wear nose studs, forbidden from keeping long nails or polishing them.</p>
+
+<p class="text-lg text-gray-600">◉Colouring of the hair is strictly forbidden.</p>
+
+<p class="text-lg text-gray-600">◉All must tie two plates. No front fringes are allowed.
+</p>
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">For Classes IV-XII Uniform</h2>
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">For Boys Mondaay,Tuesday,Thursday and on all the days of Examination</h2>
+
+<p class="text-lg text-gray-600">●Royal Blue Pant & White Shirts with Blue Stripes.</p>
+
+<p class="text-lg text-gray-600">●(Pants should have pleats)</p>
+
+<p class="text-lg text-gray-600">●Shoes – Black, Socks – White</p>
+
+<p class="text-lg text-gray-600">●Neck Tie & Belt</p>
+
+<p class="text-lg text-gray-600 font-bold">On Wednesday and on Days of Activities.</p>
+
+<p class="text-lg text-gray-600">●House T – Shirt, White Pant, Canvas Shoes & Socks.</p>
+<p class="text-lg text-gray-600 font-bold">On Fridays</p>
+<p class="text-lg text-gray-600 font-bold">White Shirt, White Pant, Canvas Shoes & Socks.</p>
+<p class="text-lg text-gray-600">◉Boys are not permitted to wear low waist pant</p>
+<p class="text-lg text-gray-600">◉Hair style should be plain (no gels and spikes)</p>
+<p class="text-lg text-gray-600">◉Hair should be regularly trimmed (clean crop cut)</p>
+<h2 class ="text-2xl font-bold text-gray-800 mb-2">Uniform For Girls</h2>
+<p class="text-lg text-gray-600 font-bold">Mondays, Tuesdays, Thursdays and on all the days of examination.</p>
+<p class="text-lg text-gray-600">●Royal Blue Pant& White Shirt with Blue Stripes with Over Coat</p>
+<p class="text-lg text-gray-600">●(Pant should have pleat)</p>
+
+<p class="text-lg text-gray-600">●Shoes – Black, Socks – White</p>
+
+<p class="text-lg text-gray-600">●Neck Tie & Belt</p>
+<p class="text-lg text-gray-600 font-bold">On Wednesday and on Days of Activities.</p>
+
+<p class="text-lg text-gray-600">House T – Shirt, White Skirt, Canvas Shoes & Socks.</p>
+
+<p class="text-lg text-gray-600 font-bold">On Fridays</p>
+<p class="text-lg text-gray-600 font-bold">White Shirt, White Skirt Canvas Shoes & Socks.</p>
+<p class="text-lg text-gray-600">●They are not permitted to wear nose studs, forbidden from keeping long nails or polishing them.</p>
+<p class="text-lg text-gray-600">●Colouringof the hair is strictly forbidden</p>
+<p class="text-lg text-gray-600">●All must tie two plates. No front fringes are allowed.</p>
+<p class="text-lg text-gray-600">
+The school uniform is important and students should come to school wearing a neat and tidy uniform. Untidiness in dress and slovenliness in behavior damage the image of the student and the school. Identity Cards provided by the school has to be compulsorily worn by the students whenever students are found in the school campus. Students are not permitted to wear any fancy watches, bangles or finger rings. Students are required to wear decent uniform respecting their own modesty and that of others.</p>
+<p class="text-lg text-gray-600 font-bold">Mehendi is not permitted in the school, under any circumstances.</p>
+</p>
+
+
+
+              </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div id="leadership-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                               <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                  
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Students Leadership & Participation</h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <p class="text-lg text-gray-600">A leader must be a visionary and should be able to inspire innovation and change to provide high level strategic leadership for effective and efficient execution of ideas & views in every field. We, the Josephites involve ownselves in various clubs and committees.</p>
+</div>
+<p class="text-2xl text-gray-600 font-bold">Spiritual and Moral Guidance :
+</p>
+<p class="text-lg text-gray-600">●Individual counselling is provided to the students, parents as well as teachers according to the need.</p>
+<p class="text-lg text-gray-600">●Special prayers are offered to God for the needy poor & diseased.</p>
+
+<p class="text-2xl text-gray-600 font-bold">Clubs and Associations :</p>
+<p class="text-1xl text-gray-600 font-bold">Eco Club</p>
+
+<p class="text-lg text-gray-600">Eco club is rendering yeoman's service to the school community to build up strong awareness among the students about the challenges faced by Mother Earth.</p>
+
+
+<p class="text-lg text-gray-600">Every student is given a small poster containing slogans explaining the responsibility for cleanliness of the school. The trees of the campus are named by the students after the great heroes of the world reminding that they have been and will be breathing for every Josephite the pure air and freshness of life.</p>
+<p class="text-lg text-gray-600">Joseph's campus wins the title 'Polythene Free Zone and Zero-litter Campus'</p>
+
+<p class="text-1xl text-gray-600 font-bold">Co-curricular Club</p>
+
+<p class="text-lg text-gray-600">This club conducts activities such as extempore, elocution, debate, quiz, essay & poetry writing, creating stories, to help the students to break through the nutshells and gain confidence.</p>
+
+<p class="text-1xl text-gray-600 font-bold">Paryavaran Mitra</p>
+<p class="text-lg text-gray-600">The Paryavaran Mitra programme is the initiative of CLE in partnership with the Ministry of Environment and Forest (MOEF) and Arcelor Mittal. The goal of the Paryavaran Mitra programme is to create a network of Young people across the Nation who have sufficient knowledge and awareness and commitment to meet the Challenge of global citizenship and climate change. In Paryavaran Mitra a child realizes the following :</p>
+
+<p class="text-lg text-gray-600">●Plantation of trees.</p>
+<p class="text-lg text-gray-600">●To keep the house, surroundings and school campus clean.</p>
+<p class="text-lg text-gray-600">●Conservation of water.</p>
+<p class="text-lg text-gray-600">●Optimum use of energy resources.</p>
+
+<p class="text-1xl text-gray-600 font-bold">Media Club</p>
+<p class="text-lg text-gray-600">The members of Media club provide the Josephites with the news updates in economic, social, political spheres and sports. The members are encouraged to contribute to the website writings on various current issues and are the makers of the News letter named "Josephite Panorama".</p>
+<p class="text-1xl text-gray-600 font-bold">Music Club</p>
+<p class="text-lg text-gray-600">To meet the challenges of the present time, the school also gears up for one special feature of humans - that is to develop the latest talents of students in songs, dance and instrumental music.</p>
+<p class="text-1xl text-gray-600 font-bold">Human Rights' Clubs</p>
+<p class="text-lg text-gray-600">The students have the right to protect their identity, needful assistance and keep themselves safe and sound. So the club members always stretch their helping hands to the needy and troubled to overcome the crisis period.</p>
+
+<p class="text-1xl text-gray-600 font-bold">NSS</p>
+<p class="text-lg text-gray-600">The motto and aim of NSS is to help the poor and needy. So the club members collect old clothes and stationery and distribute the same among the poor students of the interior villages of West Bengal.</p>
+
+<p class="text-1xl text-gray-600 font-bold">Little Way Association</p>
+<p class="text-lg text-gray-600">The catholic students have a special role to play in devoting their time and energy in pleasing God in little ways with much love after the example of their patroness St. Therese - The Little flower of Jesus.</p>
+
+<p class="text-1xl text-gray-600 font-bold">Sports and Games Club</p>
+<p class="text-lg text-gray-600">The year has been an eventful one for the Josephites. The school has various games teams and added new feathers to its cap as number of matches viz. Football, Basket ball, Badminton, Table Tennis and so on were organized and the students proved their efficiency in every field. SJCHSS has achieved the supreme honour 'BEST ATHLETIC SCHOOL' among the 46 participating schools in the Regional Sports Meet 2011 of ASISC, West Bengal Chapter. Excluding these clubs, there are several committees for the all round development of the students so that the banner of St. Joseph's may fly higher and higher in the days to come.</p>
+<p class="text-lg text-gray-600">The following are the members of the various Committees for the academic session 2022-2023:</p>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th>1</th>
+    <th>Cultural & Literary</th>
+    <th>i.Ms. Baby Rani Das<br>
+ii.Mrs. Teresa Wheeler<br>
+iii.Mr. Raphael Shah<br>
+vi.Mrs. Adity Dadel<br>
+v.Mrs. Shilpi Sharkhel<br>
+vi.Mrs. Mohar Banerjee</th>
+  </tr>
+  <tr>
+    <th>2</th>
+    <th>Games & Sports</th>
+    <th>i.Mr. Albert Baptist<br>
+ii.Mrs. Kajol Banerjee<br>
+iii.Mr. Subhendu Chatterjee<br>
+iv.Mr. Derrick Benjamin</th>
+  </tr>
+  <tr>
+    <th>3</th>
+
+    <th>Discipline</th>
+    <th>i.Mr. Albert Baptist<br>
+ii.Mrs. Kajol Banerjee<br>
+iii.Mr. Subhendu Chatterjee<br>
+iv.Mr. Derrick Benjamin<br>
+v.Mr. Lakhbir singh<br>
+vi.All the Teachers'</th>
+  </tr>
+ <tr>
+    <th>4</th>
+    <th>Cleanliness, Maintenance & Eco Club, Inventory</th>
+    <th>i.Mr. David Singh (Science Lab)<br>
+a.Mrs. Uma Sarkar (Chemistry)<br>
+b.Mrs. Mary Christy (Physics)<br>
+c.Mrs. Tuhina Biswas (Biology)<br>
+ii.Mr. Ravi Balmiki (Computer)<br>
+iii.Mr. Albert Baptist<br>
+iv.Mrs. Rosy Sarkar<br>
+v.Mr. Deepak</th>
+  </tr>
+ <tr>
+    <th>5</th>
+    <th>Website ( Editing the Write-ups )</th>
+    <th>i.Mrs. Kusum Bagga<br>
+ii.Mrs. Lopamudra Chowdhury<br>
+iii.Mr. Ravi Balmiki<br>
+iv.Ms. Payal Sengupta</th>
+  </tr>
+ <tr>
+    <th>6</th>
+    <th>House Master/Mistress</th>
+    <th>i.Mr. Dhirendra & Ms. Mita<br>
+ii.Mr. Arbind<br>
+iii.Mrs. Barnali<br>
+iv.Mr. Arko & Ms. Susmita</th>
+ <tr>
+    <th>7</th>
+    <th>Prize Incharge & Record Keeper</th>
+    <th>i.Mrs. Rita Bhunia<br>
+ii.Mrs. Swagata Mazumder<br>
+iii.Mr. Lakhbir Singh</th>
+  </tr>
+ <tr>
+    <th>8</th>
+    <th>Examination Committee</th>
+    <th>i.Mr. Dhirendra<br>
+ii.Mr. Arbind</th>
+  </tr>
+ <tr>
+    <th>9</th>
+    <th>Art & Craft</th>
+    <th>i.Mrs. Bharti Sharma</th>
+  </tr>
+ <tr>
+    <th>10</th>
+    <th>Library</th>
+    <th>i.Mrs. Uma Sarkar<br>
+ii.Mr. Arko Chatterjee<br>
+iii.Mr. Deepak</th>
+  </tr>
+
+ <tr>
+    <th>11</th>
+    <th>Cabinet Incharge</th>
+    <th>iMrs. Poulami Biswas<br>
+ii.Mr. Derrick Benjamin</th>
+  </tr>
+ <tr>
+    <th>12</th>
+    <th>News Letter Committee</th>
+    <th>i.Mrs. Rita Bhunia<br>
+ii.Mrs. Lopamudra Chowdhury<br>
+iii.Mrs. Swatee Prasad<br>
+iv.Mrs. Bharti Sharma<br>
+v.Mr. Ravi Balmiki<br>
+vi.Ms. Payal Sengupta</th>
+  </tr>
+ <tr>
+    <th>13</th>
+    <th>All round Supervision</th>
+    <th>i.Sisters & Mr. John Das</th>
+  </tr>
+ <tr>
+    <th>14</th>
+    <th>Incharge of Support Staff</th>
+    <th>i.Sisters & Mr. John Das</th>
+  </tr>
+
+
+  </tr>
+
+</style>
+
+</table>
+                    <h1 class="text-2xl font-bold text-gray-800 mb-4">Cabinet Member 2022-2023</h1>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th>SL.NO.</th>
+    <th>NAME OF THE POST</th>
+    <th>NAME OF THE STUDENT</th>
+    <th>CLASS/SEC</th>
+      </tr>
+  <tr>
+    <th>1</th>
+    <th>PRESIDENT</th>
+    <th>RUDRANSHI GHOSH</th>
+    <th>X-A</th>
+    </tr>
+  <tr>
+    <th>2</th>
+    <th>VICE PRESIDENT</th>
+    <th>SUROSHREE CHATTOPADHYAY</th>
+    <th>X-B</th>
+     </tr>
+ <tr>
+    <th>3</th>
+    <th>SECRETARY</th>
+    <th>MD.AZHARUDDIN</th>
+   <th>X-A</th>
+     </tr>
+ <tr>
+    <th>4</th>
+    <th>ASST.JOINT SECRETARY</th>
+    <th>ANUPA SADHU</th>
+   <th>X-B</th>
+    </tr>
+ <tr>
+    <th>5</th>
+    <th>SCHOOL HEAD BOY</th>
+    <th>ABIR MUKHERJEE</th>
+   <th>IX-A</th>
+   <tr>
+    <th>6</th>
+    <th>SCHOOL HEAD GIRL</th>
+    <th>ARNAVI KUMARI</th>
+     <th>IX-A</th>
+     </tr>
+ <tr>
+    <th>7</th>
+    <th>ASST. SCHOOL HEAD BOY</th>
+    <th>SUBHADEEP MAJI</th>
+        <th>VIII-B</th>
+       
+  </tr>
+ <tr>
+    <th>8</th>
+    <th>ASST.SCHOOL HEAD GIRL</th>
+    <th>KRITTIKA KUNDU</th>
+    <th>VIII-C</th>
+      </tr>
+ <tr>
+    <th>9</th>
+    <th>SPORTS LEADERS & ASST.SPORTS LEADERS</th>
+    <th>AYAN GORAIN<br>
+      DEEPSHIKA TUDU<br>
+      RITAMKAR<br>
+      ALISHA KUMARI</th>
+     <th>IX-B<br>
+      IX-B<br>
+      VIII-B<br>
+     VIII-C</th>
+
+ <tr>
+    <th>10</th>
+    <th>LITERARY COMMITTEE LEADERS AND ASST.</th>
+    <th> SOUVIK SAHA<br>
+    MANTASHA ABID<br>
+    SATWIK PAL<br>
+     PRIYA MALLICK
+  </th>
+<th>IX-C<br>
+      IX-C<br>
+      VIII-C<br>
+     VIII-B</th>
+
+  </tr>
+ <tr>
+    <th>11</th>
+    <th>CULTURAL COMMITTEE AND ASST. LEADER</th>
+    <th>MAINAKSAHA<br>
+       NISHITA SINGH<br>
+     AGNISH MUKHERJEE<br>
+      PRERONA<br>
+      </th>
+    <th>IX-A<br>
+      IX-A<br>
+      VIII-A<br>
+     VIII-B</th>
+
+  </tr>
+ <tr>
+    <th>12</th>
+    <th>DISCIPLINE COMMITTEE LEADERS AND ASST.</th>
+    <th>AMIT SHARMA<br>
+     ANUSKA CHANDRA<br>
+      NISHANT RAJ<br>
+     ANUSHKA SHARMA</th>
+<th>IX-B<br>
+      IX-C<br>
+      VIII-B<br>
+     VIII-B</th>
+
+  </tr>
+ <tr>
+    <th>13</th>
+    <th>BLUE HOUSE LEADER AND ASST. LEADER</th>
+    <th>SUMIT KIRAN<br>
+     SWASTIK GIRI<br>
+     ADITYA RAJ<br>
+     ANKITA HEMBROM</th>
+    <th>IX-A<br>
+      IX-C<br>
+      VIII-A<br>
+     VIII-B</th>
+
+  </tr>
+
+ <tr>
+    <th>14</th>
+    <th>GREEN HOUSE LEADER AND ASST. LEADER</th>
+    <th>PRATEE PRABHAKAR<br>
+     ADITI SINGH<br>
+     SOURAV SHARMA<br>
+     ABHIPSA GOSWAMI</th>
+    <th>IX-C<br>
+      IX-C<br>
+      VIII-A<br>
+     VIII-A</th>
+
+  </tr>
+
+ <tr>
+    <th>15</th>
+    <th>RED HOUSE LEADER AND ASST. LEADER</th>
+    <th>PRATIK PAUL<br>
+     PRABHJOT KAUR<br>
+     ASHUTOSH SINHA<br>
+     SHAGUN PRASAD/th>
+    <th>IX-B<br>
+      IX-B<br>
+      VIII-A<br>
+     VIII-C</th>
+
+  </tr>
+
+ <tr>
+    <th>16</th>
+    <th>YELLOW HOUSE LEADER AND ASST. LEADER</th>
+    <th>ISHAN DAS<br>
+     AHANA ROY<br>
+     OM MISHRA<br>
+     SHREYA MONDAL</th>
+    <th>IX-A<br>
+      IX-A<br>
+      VIII-C<br>
+     VIII-C</th>
+
+  </tr>
+
+
+
+ 
+
+</table>
+
+            </div>
+        </section>
+    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="vacations-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">School Vacations</h1>
+                    <p class="text-lg text-gray-600">● There are three vacations during the year. Summer Vacation, Puja Vacation and Christmas Vacation.</p>
+  <p class="text-lg text-gray-600">● Saturday is usually the weeklyholiday. However the students may be asked to be present for Social Work and co-curricular activities on these days. Special classes also may be conducted to cover up the syllabus.</p>
+  <p class="text-lg text-gray-600">● The School Calendar reflects the programme of the whole year indicating vacation periods, weekly and other holidays and class days.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="principals-helm-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Principals at the Helm of SJCHSS Chittranajan</h1>
+ <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th>Sl.No.</th>
+    <th>Name</th>
+    <th>Year</th>
+  </tr>
+<tr>
+    <th>1</th>
+    <th>SR.MICHAEL</th>
+    <th>1952-1955</th>
+  </tr>
+<tr>
+    <th>2</th>
+    <th>SR.CELINE</th>
+    <th>1955-1960</th>
+  </tr>
+<tr>
+    <th>3</th>
+    <th>SR. JOSPHINE</th>
+    <th>1960-1961</th>
+  </tr>
+<tr>
+    <th>4</th>
+    <th>SR. INFANT JESUS</th>
+    <th>1961-1962</th>
+  </tr>
+<tr>
+    <th>5</th>
+    <th>SR. CLAIRE</th>
+    <th>1962-1969</th>
+  </tr>
+<tr>
+    <th>6</th>
+    <th>SR. PIUS</th>
+    <th>1969-1976</th>
+  </tr>
+<tr>
+    <th>7</th>
+    <th>SR. PHILIPPA</th>
+    <th>1976-1978</th>
+  </tr>
+<tr>
+    <th>8</th>
+    <th>SR. ANN CHARLOTTE</th>
+    <th>1978-1980</th>
+  </tr>
+<tr>
+    <th>9</th>
+    <th>SR. FLORITA AC</th>
+    <th>1980-1984</th>
+  </tr>
+<tr>
+    <th>10</th>
+    <th>SR. DOROTHY AC</th>
+    <th>1984-1985</th>
+  </tr>
+<tr>
+    <th>11</th>
+    <th>SR. FELICIA AC</th>
+    <th>1985-1987</th>
+  </tr>
+<tr>
+    <th>12</th>
+    <th>SR. LANCIA AC</th>
+    <th>1987-1989</th>
+  </tr>
+<tr>
+    <th>13</th>
+    <th>SR. IRENE PEREIRA AC</th>
+    <th>1989-1990</th>
+  </tr>
+<tr>
+    <th>14</th>
+    <th>SR. EDLEBURGH BS</th>
+    <th>1990-1992</th>
+  </tr>
+<tr>
+    <th>15</th>
+    <th>SR. CLEOPHA BS</th>
+    <th>1992-1996</th>
+  </tr>
+<tr>
+    <th>16</th>
+    <th>SR. SAPIENTIA BS</th>
+    <th>1996-1999</th>
+  </tr>
+<tr>
+    <th>17</th>
+    <th>SR. ORDILIA BS</th>
+    <th>1999-2003</th>
+  </tr>
+<tr>
+    <th>18</th>
+    <th>SR. CARON BS</th>
+    <th>2003-2008</th>
+  </tr>
+<tr>
+    <th>19</th>
+    <th>SR. TERESA MARTIS BS</th>
+    <th>2008-2014</th>
+  </tr>
+<tr>
+    <th>20</th>
+    <th>SR. SHWETHA BS</th>
+    <th>2014-2020</th>
+  </tr>
+<tr>
+    <th>21</th>
+    <th>SR. JENNIFER CSST</th>
+    <th>2020-2021</th>
+  </tr>
+<tr>
+    <th>22</th>
+    <th>SR. ANUPAMA CSST</th>
+    <th>2021-2023</th>
+  </tr>
+<tr>
+    <th>23</th>
+    <th>SR. ASHA AGNES</th>
+    <th>2023-PRESENT</th>
+  </tr>
+</table>
+            </div>
+        </section>
+
+                                   </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div id="icse-toppers-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">I.C.S.E. Toppers</h1>
+                    <p class="text-lg text-gray-600">Our academic achievers</p>
+          
+                </div>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th>Year</th>
+    <th>Name</th>
+    <th>Percentage</th>
+  </tr>
+ <tr>
+    <th>2001</th>
+    <th>MAYUKH CHAUDHURI</th>
+    <th>92.50</th>
+  </tr>
+
+ <tr>
+    <th>2002</th>
+    <th>SUDIPTO DUTTA</th>
+    <th>90.50</th>
+  </tr>
+
+ <tr>
+    <th>2003</th>
+    <th>AVISHEK SINGH</th>
+    <th>92.30</th>
+  </tr>
+
+ <tr>
+    <th>2004</th>
+    <th>SOURAV NATH</th>
+    <th>90.80</th>
+  </tr>
+
+ <tr>
+    <th>2005</th>
+    <th>ABHILASH KUMAR SHARMA</th>
+    <th>92.30</th>
+  </tr>
+
+ <tr>
+    <th>2006</th>
+    <th>DEEPANKAR ARUNESH</th>
+    <th>95.60</th>
+  </tr>
+
+ <tr>
+    <th>2007</th>
+    <th>ANURAAG GUTGUTIA</th>
+    <th>95.80</th>
+  </tr>
+
+ <tr>
+    <th>2008</th>
+    <th>SOUMITA MONDAL</th>
+    <th>94.70</th>
+  </tr>
+
+ <tr>
+    <th>2009</th>
+    <th>KOUSTAV GARAI</th>
+    <th>96.50</th>
+  </tr>
+
+ <tr>
+    <th>2010</th>
+    <th>ARKADIP BASAK</th>
+    <th>95.40</th>
+  </tr>
+
+ <tr>
+    <th>2011</th>
+    <th>RAHUL SINHA</th>
+    <th>96.60</th>
+  </tr>
+
+ <tr>
+    <th>2012</th>
+    <th>SAGNIK GARAI</th>
+    <th>96.80</th>
+  </tr>
+
+ <tr>
+    <th>2012</th>
+    <th>ANANYA CHAKRABARTI</th>
+    <th>96.80</th>
+  </tr>
+
+ <tr>
+    <th>2013</th>
+    <th>GAURAB DEY</th>
+    <th>96.40</th>
+  </tr>
+
+ <tr>
+    <th>2014</th>
+    <th>SANDEEPAN CHAKRABORTY</th>
+    <th>95.60</th>
+  </tr>
+
+ <tr>
+    <th>2015</th>
+    <th>RAIMA SEN</th>
+    <th>97.20</th>
+  </tr>
+
+ <tr>
+    <th>2016</th>
+    <th>YASH VARDHAN GUTGUTIA</th>
+    <th>96.00</th>
+  </tr>
+
+ <tr>
+    <th>2017</th>
+    <th>KOUSTAV SEN</th>
+    <th>97.60</th>
+  </tr>
+
+ <tr>
+    <th>2018</th>
+    <th>HIMANSHU DAS</th>
+    <th>96.60</th>
+  </tr>
+
+ <tr>
+    <th>2019</th>
+    <th>ARYAN PRASAD</th>
+    <th>96.20</th>
+  </tr>
+
+ <tr>
+    <th>2020</th>
+    <th>UJJAINI BISWAS</th>
+    <th>97.80</th>
+  </tr>
+
+ <tr>
+    <th>2021</th>
+    <th>NAAZ NUSRAT RAHAMAN</th>
+    <th>97.80</th>
+  </tr>
+
+ <tr>
+    <th>2022</th>
+    <th>ANIRBAN ROY</th>
+    <th>98.20</th>
+  </tr>
+
+ <tr>
+    <th>2023</th>
+    <th>ADITYA BHARDWAJ</th>
+    <th>99.00</th>
+  </tr>
+
+ 
+
+</table>
+            </div>
+        </section>
+    </div>
+
+    <div id="isc-toppers-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">I.S.C. Toppers</h1>
+                    <p class="text-lg text-gray-600">Our senior secondary achievers</p>
+                </div>
+                
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+          <table>
+  <tr>
+    <th>Year</th>
+    <th>Name</th>
+    <th>Percentage</th>
+  </tr>
+ <tr>
+    <th>2009</th>
+    <th>POULOMI CHATTERJEE</th>
+    <th>77.6%</th>
+  </tr>
+ <tr>
+    <th>2010</th>
+    <th>KUMARI JYOTSNA</th>
+    <th>91.2%</th>
+  </tr>
+ <tr>
+    <th>2011</th>
+    <th>SHWETA KUMARI PODDAR</th>
+    <th>85.2%</th>
+  </tr>
+ <tr>
+    <th>2012</th>
+    <th>PROTIMA CHAKRABORTY</th>
+    <th>84.0%</th>
+  </tr>
+ <tr>
+    <th>2013</th>
+    <th>SRIJONI BANERJEE</th>
+    <th>85.0%</th>
+  </tr>
+ <tr>
+    <th>2014</th>
+    <th>MEGHA MEHARIA</th>
+    <th>82.5%</th>
+  </tr>
+ <tr>
+    <th>2015</th>
+    <th>SHAILAJA DOKANIA</th>
+    <th>92.5%</th>
+  </tr>
+ <tr>
+    <th>2016</th>
+    <th>BANHISIKHA ROY</th>
+    <th>80.2%</th>
+  </tr>
+ <tr>
+    <th>2018</th>
+    <th>CHARLES JHONY GHOSH</th>
+    <th>88.0%</th>
+  </tr>
+ <tr>
+    <th>2019</th>
+    <th>UTSAV KR. VISHWAKARMA</th>
+    <th>95.5%</th>
+  </tr>
+ <tr>
+    <th>2020</th>
+    <th>ESHIKA DATTA</th>
+    <th>97.0%</th>
+  </tr>
+ <tr>
+    <th>2021</th>
+    <th>ANUSHKA DHAR</th>
+    <th>96%</th>
+  </tr>
+</table>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- ACADEMICS PAGE -->
+    <div id="academics-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Academic Evaluation</h1></div>
+
+ <div class="card-hover bg-purple-50 p-6 rounded-xl border border-purple-100">
+                         <p class="font-bold text-xl text-gray-800"> 
+
+● Evaluation is in the form of Examination held at regular intervals-Term I, Half Yearly, Term II, Final Exam & other informal methods.<br>
+
+● The student who misses an examination will not appear at a later or earlier date.<br>
+
+ ●Students should maintain silence from the time they enter the examination hall, till the end of the exam.<br>
+
+ ●Students should keep all articles like books, bags, etc. in front of the class room before taking their seats. They should check that no paper/books are with them or inside the desk.<br>
+
+ ●If a student is found using any sort of unfair means in any of the examinations, zero will be awarded to him/her. If he/she repeats the same he/she will be asked to leave the school.<br>
+
+ ●Each and every student must try his or her level best to maintain calm, peaceful, anxiety free atmosphere that will be conducive to writing the examination. Any student who does not response to the instruction will be dealt with as per the rules and regulations of the school as given in this diary and as per the oral instructions given from time to time.<br>
+●Students should bring the necessary requirements for the examination.<br>
+
+● No students will be allowed to borrow or lend articles during the exams.<br>
+
+● Students should write their Names and Roll No. on the question paper Immediately after receiving it. Nothing else should be written on the question paper.<br>
+
+● No students will be allowed to leave the examination hall before the end of the allotted time for the paper. Hence, those students who are habit of hurrying in their work should concentrate and give a better quality work over the whole allotted time for the paper.<br>
+
+● In all questions of promotion or failure, the decision of the school authority will be final.<br>
+
+● In case of Class X, pupils who have missed or failed in the first two examinations will not be allowed to appear for the Board Examination.<br>
+
+● Before an examination, the Examination Admission Ticket will be issued with the school stamp on, if all the dues to the school have been paid. This is to be shown to the invigilator before the examination commences.<br>
+
+● Parents are requested not to send their children for an Examination, when they are ill or recovering from an illness such as chicken pox, mumps, measles and whenever the child is fasting for some religious reasons.<br>
+
+● It's compulsory for both the Parents/Guardians to attend the Parent-Teacher Meetings, in case of failure no papers will be shown later.<br>
+
+● Answers papers of final exams, shall not be shown. Parents and students should not contact the office regarding this matter.<br>
+
+● Results for Term - I, Half- Yearly and Term II will be uploaded in the School Portal. Computerized Final Result will be given at the end of the Session.</p>
+                    </div>
+
+
+                      </div>
+  </div>
+        </section>
+    </div>
+
+    <!-- EVENTS PAGE -->
+    <div id="events-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">School Events</h1>
+                    <p class="text-lg text-gray-600">Stay connected with our vibrant school community</p>
+                </div>
+                
+                <!-- Scrolling Events Banner -->
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg mb-8 overflow-hidden">
+                    <div class="whitespace-nowrap">
+                        <div class="inline-block animate-scroll">
+                            <span class="mx-8">🎪 Annual Sports Day - March 10th</span>
+                            <span class="mx-8">🎭 Drama Competition - March 18th</span>
+                            <span class="mx-8">🏆 Inter-House Quiz - March 25th</span>
+                            <span class="mx-8">🎨 Art Exhibition - April 2nd</span>
+                            <span class="mx-8">📚 Book Fair - April 8th</span>
+                            <span class="mx-8">🎪 Annual Sports Day - March 10th</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                            March 15
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Spring Science Fair</h3>
+                        <p class="text-gray-600 mb-4">Students showcase their scientific projects and experiments</p>
+                        <div class="text-sm text-gray-500 mb-4">📍 Main Auditorium | ⏰ 9:00 AM - 3:00 PM</div>
+                        <button class="text-blue-600 font-medium hover:text-blue-700">Learn More →</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                            March 22
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Parent-Teacher Conferences</h3>
+                        <p class="text-gray-600 mb-4">Schedule your meeting to discuss your child's progress</p>
+                        <div class="text-sm text-gray-500 mb-4">📍 Individual Classrooms | ⏰ 2:00 PM - 6:00 PM</div>
+                        <button class="text-green-600 font-medium hover:text-green-700">Schedule →</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                        <div class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
+                            April 5
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Spring Concert</h3>
+                        <p class="text-gray-600 mb-4">Our music students perform their spring repertoire</p>
+                        <div class="text-sm text-gray-500 mb-4">📍 School Theater | ⏰ 7:00 PM</div>
+                        <button class="text-purple-600 font-medium hover:text-purple-700">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Event Calendar -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Annual Event Calendar</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Annual Event Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .month {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .month h2 {
+      margin-top: 0;
+      color: #3498db;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .event {
+      margin: 10px 0;
+      padding-left: 10px;
+      border-left: 3px solid #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Annual Event Calendar - 2025</h1>
+
+  <div class="calendar">
+    <div class="month">
+      <h2>January</h2>
+      <div class="event">15 Jan – Annual Sports Day</div>
+      <div class="event">26 Jan – Republic Day Celebration</div>
+    </div>
+
+    <div class="month">
+      <h2>February</h2>
+      <div class="event">10 Feb – Science Exhibition</div>
+      <div class="event">28 Feb – National Science Day</div>
+    </div>
+
+    <div class="month">
+      <h2>March</h2>
+      <div class="event">5 Mar – Final Exams Begin</div>
+      <div class="event">23 Mar – Parent-Teacher Meeting</div>
+    </div>
+
+    <div class="month">
+      <h2>April</h2>
+      <div class="event">1 Apr – New Session Begins</div>
+      <div class="event">14 Apr – Ambedkar Jayanti</div>
+    </div>
+
+    <div class="month">
+      <h2>May</h2>
+      <div class="event">1 May – Labour Day</div>
+      <div class="event">10 May – Summer Camp Starts</div>
+    </div>
+
+    <div class="month">
+      <h2>June</h2>
+      <div class="event">5 Jun – World Environment Day</div>
+      <div class="event">20 Jun – Summer Camp Ends</div>
+    </div>
+
+    <div class="month">
+      <h2>July</h2>
+      <div class="event">15 Jul – Inter-house Debate</div>
+      <div class="event">22 Jul – English Elocution</div>
+    </div>
+
+    <div class="month">
+      <h2>August</h2>
+      <div class="event">15 Aug – Independence Day</div>
+      <div class="event">29 Aug – National Sports Day</div>
+    </div>
+
+    <div class="month">
+      <h2>September</h2>
+      <div class="event">5 Sep – Teachers' Day</div>
+      <div class="event">14 Sep – Hindi Diwas</div>
+    </div>
+
+    <div class="month">
+      <h2>October</h2>
+      <div class="event">2 Oct – Gandhi Jayanti</div>
+      <div class="event">31 Oct – National Unity Day</div>
+    </div>
+
+    <div class="month">
+      <h2>November</h2>
+      <div class="event">14 Nov – Children's Day</div>
+      <div class="event">30 Nov – Annual Function</div>
+    </div>
+
+    <div class="month">
+      <h2>December</h2>
+      <div class="event">20 Dec – Christmas Celebration</div>
+      <div class="event">24 Dec – Winter Vacation Starts</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+                      </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- GALLERY PAGE -->
+    <div id="gallery-page" class="page">
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Photo Gallery</h1>
+                    <p class="text-lg text-gray-600">Capturing memories and moments from our school life</p>
+                </div>
+                
+                <!-- Gallery Categories -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button onclick="filterGallery('all')" class="gallery-filter active bg-blue-600 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-700 transition-colors">
+                        All Photos
+                    </button>
+                    <button onclick="filterGallery('events')" class="gallery-filter bg-white text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors border">
+                        School Events
+                    </button>
+                    <button onclick="filterGallery('classroom')" class="gallery-filter bg-white text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors border">
+                        Classroom Activities
+                    </button>
+                    <button onclick="filterGallery('sports')" class="gallery-filter bg-white text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors border">
+                        Sports & Recreation
+                    </button>
+                    <button onclick="filterGallery('arts')" class="gallery-filter bg-white text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors border">
+                        Arts & Culture
+                    </button>
+                    <button onclick="filterGallery('campus')" class="gallery-filter bg-white text-gray-700 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors border">
+                        Campus Life
+                    </button>
+                </div>
+
+                <!-- Photo Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="photo-grid">
+                    <!-- School Events -->
+                    <div class="gallery-item events cursor-pointer" onclick="openLightbox('Annual Science Fair 2024', 'Students presenting their innovative science projects')">
+                        <div class="bg-gradient-to-br from-blue-400 to-blue-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🔬</div>
+                                <div class="font-semibold">Science Fair</div>
+                                <div class="text-sm opacity-90">March 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events cursor-pointer" onclick="openLightbox('Spring Concert Performance', 'Our talented students performing at the annual spring concert')">
+                        <div class="bg-gradient-to-br from-purple-400 to-purple-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎵</div>
+                                <div class="font-semibold">Spring Concert</div>
+                                <div class="text-sm opacity-90">April 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                      
+                    <div class="gallery-item events cursor-pointer" onclick="openLightbox('Cultural Festival', 'Students celebrating diversity through cultural performances')">
+                        <div class="bg-gradient-to-br from-orange-400 to-orange-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🌍</div>
+                                <div class="font-semibold">Cultural Festival</div>
+                                <div class="text-sm opacity-90">February 2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classroom Activities -->
+                    <div class="gallery-item classroom cursor-pointer" onclick="openLightbox('Interactive Learning Session', 'Students engaged in hands-on learning activities')">
+                        <div class="bg-gradient-to-br from-teal-400 to-teal-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">📚</div>
+                                <div class="font-semibold">Interactive Learning</div>
+                                <div class="text-sm opacity-90">Daily Activities</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item classroom cursor-pointer" onclick="openLightbox('Group Project Work', 'Students collaborating on creative projects')">
+                        <div class="bg-gradient-to-br from-indigo-400 to-indigo-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">👥</div>
+                                <div class="font-semibold">Group Projects</div>
+                                <div class="text-sm opacity-90">Team Work</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item classroom cursor-pointer" onclick="openLightbox('STEM Workshop', 'Students exploring science, technology, engineering, and math')">
+                        <div class="bg-gradient-to-br from-pink-400 to-pink-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">⚗️</div>
+                                <div class="font-semibold">STEM Workshop</div>
+                                <div class="text-sm opacity-90">Innovation Lab</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item classroom cursor-pointer" onclick="openLightbox('Reading Circle', 'Students enjoying story time and reading activities')">
+                        <div class="bg-gradient-to-br from-yellow-400 to-yellow-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">📖</div>
+                                <div class="font-semibold">Reading Circle</div>
+                                <div class="text-sm opacity-90">Library Time</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sports & Recreation -->
+                    <div class="gallery-item sports cursor-pointer" onclick="openLightbox('Annual Sports Day', 'Students competing in various athletic events')">
+                        <div class="bg-gradient-to-br from-red-400 to-red-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏃‍♂️</div>
+                                <div class="font-semibold">Sports Day</div>
+                                <div class="text-sm opacity-90">Athletic Events</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item sports cursor-pointer" onclick="openLightbox('Basketball Tournament', 'Inter-house basketball competition')">
+                        <div class="bg-gradient-to-br from-orange-500 to-red-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏀</div>
+                                <div class="font-semibold">Basketball</div>
+                                <div class="text-sm opacity-90">Tournament</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item sports cursor-pointer" onclick="openLightbox('Swimming Championships', 'Students showcasing their swimming skills')">
+                        <div class="bg-gradient-to-br from-cyan-400 to-blue-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏊‍♀️</div>
+                                <div class="font-semibold">Swimming</div>
+                                <div class="text-sm opacity-90">Championships</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item sports cursor-pointer" onclick="openLightbox('Playground Activities', 'Students enjoying outdoor recreational activities')">
+                        <div class="bg-gradient-to-br from-green-500 to-teal-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎮</div>
+                                <div class="font-semibold">Playground Fun</div>
+                                <div class="text-sm opacity-90">Recess Time</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arts & Culture -->
+                    <div class="gallery-item arts cursor-pointer" onclick="openLightbox('Art Exhibition', 'Student artwork displayed in our annual art show')">
+                        <div class="bg-gradient-to-br from-purple-500 to-pink-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎨</div>
+                                <div class="font-semibold">Art Exhibition</div>
+                                <div class="text-sm opacity-90">Creative Works</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item arts cursor-pointer" onclick="openLightbox('Drama Performance', 'Students performing in the school play')">
+                        <div class="bg-gradient-to-br from-indigo-500 to-purple-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎭</div>
+                                <div class="font-semibold">Drama Club</div>
+                                <div class="text-sm opacity-90">Theater Arts</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item arts cursor-pointer" onclick="openLightbox('Music Ensemble', 'School band and choir performances')">
+                        <div class="bg-gradient-to-br from-blue-500 to-indigo-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🎼</div>
+                                <div class="font-semibold">Music Ensemble</div>
+                                <div class="text-sm opacity-90">Band & Choir</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item arts cursor-pointer" onclick="openLightbox('Dance Recital', 'Students showcasing their dance talents')">
+                        <div class="bg-gradient-to-br from-pink-500 to-red-500 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">💃</div>
+                                <div class="font-semibold">Dance Recital</div>
+                                <div class="text-sm opacity-90">Performance Arts</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campus Life -->
+                    <div class="gallery-item campus cursor-pointer" onclick="openLightbox('School Campus', 'Beautiful view of our school building and grounds')">
+                        <div class="bg-gradient-to-br from-green-600 to-teal-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🏫</div>
+                                <div class="font-semibold">School Campus</div>
+                                <div class="text-sm opacity-90">Main Building</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item campus cursor-pointer" onclick="openLightbox('Library Corner', 'Students studying in our well-equipped library')">
+                        <div class="bg-gradient-to-br from-amber-500 to-orange-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">📚</div>
+                                <div class="font-semibold">Library</div>
+                                <div class="text-sm opacity-90">Study Space</div>
+                            </div>
+                        </div>
+                    </div>
+                                       
+                    <div class="gallery-item campus cursor-pointer" onclick="openLightbox('Garden Area', 'Students learning about nature in our school garden')">
+                        <div class="bg-gradient-to-br from-green-400 to-green-600 aspect-square rounded-lg flex items-center justify-center text-white hover:scale-105 transition-transform shadow-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🌱</div>
+                                <div class="font-semibold">School Garden</div>
+                                <div class="text-sm opacity-90">Nature Learning</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        Load More Photos
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-full overflow-hidden">
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="lightbox-title" class="text-xl font-bold text-gray-800"></h3>
+                <button onclick="closeLightbox()" class="text-gray-500 hover:text-gray-700 text-2xl">×</button>
+            </div>
+            <div class="p-6">
+                <div class="bg-gradient-to-br from-blue-100 to-purple-100 aspect-video rounded-lg flex items-center justify-center mb-4">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">📸</div>
+                        <div class="text-gray-600">Photo would be displayed here</div>
+                        <div class="text-sm text-gray-500 mt-2">In a real gallery, this would show the actual image</div>
+                    </div>
+                </div>
+                <p id="lightbox-description" class="text-gray-600"></p>
+                <div class="flex justify-between items-center mt-6">
+                    <button onclick="previousPhoto()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                        ← Previous
+                    </button>
+                    <div class="flex space-x-2">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                            Download
+                        </button>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                            Share
+                        </button>
+                    </div>
+                    <button onclick="nextPhoto()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
+                        Next →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact-page" class="page">
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Contact Us</h1>
+                    <p class="text-lg text-gray-600">We'd love to hear from you! Get in touch with our school.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
+                        <p class="text-lg text-gray-600 mb-8">
+                            Contact us for enrollment information, questions, or to schedule a school tour.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-blue-600 text-xl">📍</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Address</div>
+                                    <div class="text-gray-600">D-26,Ashoke Avenue,P.O. Chittranjan,Burdwan-713331,WB</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-green-600 text-xl">📞</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Phone</div>
+                                    <div class="text-gray-600">+91 9547051198</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-purple-600 text-xl">✉️</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Email</div>
+                                    <div class="text-gray-600">sjccrj@gmail.com</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-orange-600 text-xl">🕐</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800">Office Hours</div>
+                                    <div class="text-gray-600">Monday - Friday: 7:30 AM - 1:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                            <p class="text-yellow-800 text-sm">
+                                <strong>Demo Form:</strong> This is a sample contact form for demonstration purposes.
+                            </p>
+                        </div>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option>General Inquiry</option>
+                                    <option>Enrollment Information</option>
+                                    <option>Schedule a Tour</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- School Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                  <img src="https://sjccrj.org/images/logo.png" alt="Logo" class="w-24 h-24 mr-3">
+                       
+                        <span class="font-bold text-2xl">St.Joseph's Convent Higher Secondary School,Chittranjan </span>
+                    </div>
+
+                  
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                     <ul class="space-x-2">
+                    <ul class="space-y-3">
+                    
+                        <li><a href="#" onclick="showPage('about')" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" onclick="showPage('academics')" class="text-gray-300 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="#" onclick="showPage('admission')" class="text-gray-300 hover:text-white transition-colors">Admissions</a></li>
+                        <li><a href="#" onclick="showPage('events')" class="text-gray-300 hover:text-white transition-colors">Events</a></li>
+                        <li><a href="#" onclick="showPage('contact')" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Resources</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" onclick="showPage('elearning')" class="text-gray-300 hover:text-white transition-colors">E-Learning </a></li>
+                        <li><a href="#" onclick="showPage('curriculum')" class="text-gray-300 hover:text-white transition-colors">Curriculum</a></li>
+                        <li><a href="#" onclick="showPage('activities')" class="text-gray-300 hover:text-white transition-colors">Activities</a></li>
+                        <li><a href="#" onclick="showPage('uniform')" class="text-gray-300 hover:text-white transition-colors">Uniform Guide</a></li>
+                        <li><a href="#" onclick="showPage('regulations')" class="text-gray-300 hover:text-white transition-colors">Regulations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-2">📍</span>
+                            <span class="text-gray-300 text-sm">D-26, Ashoke Avenue,P.O. Chittaranjan
+Burdwan - 713331, WB</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-2">📞</span>
+                            <span class="text-gray-300 text-sm">+91 9547051198</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-2">✉️</span>
+                            <span class="text-gray-300 text-sm">sjccrj@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-2">🕐</span>
+                            <span class="text-gray-300 text-sm">Mon,Wed,Fri: 11:00 AM - 12:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 text-sm">© 2025 SJCCRJ School. All rights reserved.</p>
+                 <p class="text-gray-300 text-sm">©Designed by Nitish Kumar Mahato.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation function
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            const targetPage = document.getElementById(pageId + '-page');
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Update navigation active state
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'font-medium');
+                link.classList.add('text-gray-600');
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery filter functionality
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const filters = document.querySelectorAll('.gallery-filter');
+            
+            // Update filter buttons
+            filters.forEach(filter => {
+                filter.classList.remove('active', 'bg-blue-600', 'text-white');
+                filter.classList.add('bg-white', 'text-gray-700', 'border');
+            });
+            
+            event.target.classList.remove('bg-white', 'text-gray-700', 'border');
+            event.target.classList.add('active', 'bg-blue-600', 'text-white');
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox functionality
+        let currentPhotoIndex = 0;
+        const photos = [
+            { title: 'Annual Science Fair 2024', description: 'Students presenting their innovative science projects' },
+            { title: 'Spring Concert Performance', description: 'Our talented students performing at the annual spring concert' },
+            { title: 'Graduation Ceremony 2024', description: 'Celebrating our graduating class of 2024' },
+            { title: 'Cultural Festival', description: 'Students celebrating diversity through cultural performances' },
+            { title: 'Interactive Learning Session', description: 'Students engaged in hands-on learning activities' },
+            { title: 'Group Project Work', description: 'Students collaborating on creative projects' },
+            { title: 'STEM Workshop', description: 'Students exploring science, technology, engineering, and math' },
+            { title: 'Reading Circle', description: 'Students enjoying story time and reading activities' },
+            { title: 'Annual Sports Day', description: 'Students competing in various athletic events' },
+            { title: 'Basketball Tournament', description: 'Inter-house basketball competition' },
+            { title: 'Swimming Championships', description: 'Students showcasing their swimming skills' },
+            { title: 'Playground Activities', description: 'Students enjoying outdoor recreational activities' },
+            { title: 'Art Exhibition', description: 'Student artwork displayed in our annual art show' },
+            { title: 'Drama Performance', description: 'Students performing in the school play' },
+            { title: 'Music Ensemble', description: 'School band and choir performances' },
+            { title: 'Dance Recital', description: 'Students showcasing their dance talents' },
+            { title: 'School Campus', description: 'Beautiful view of our school building and grounds' },
+            { title: 'Library Corner', description: 'Students studying in our well-equipped library' },
+            { title: 'Cafeteria Time', description: 'Students enjoying healthy meals together' },
+            { title: 'Garden Area', description: 'Students learning about nature in our school garden' }
+        ];
+
+        function openLightbox(title, description) {
+            document.getElementById('lightbox-title').textContent = title;
+            document.getElementById('lightbox-description').textContent = description;
+            document.getElementById('lightbox').classList.remove('hidden');
+            
+            // Find current photo index
+            currentPhotoIndex = photos.findIndex(photo => photo.title === title);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        function previousPhoto() {
+            currentPhotoIndex = currentPhotoIndex > 0 ? currentPhotoIndex - 1 : photos.length - 1;
+            const photo = photos[currentPhotoIndex];
+            document.getElementById('lightbox-title').textContent = photo.title;
+            document.getElementById('lightbox-description').textContent = photo.description;
+        }
+
+        function nextPhoto() {
+            currentPhotoIndex = currentPhotoIndex < photos.length - 1 ? currentPhotoIndex + 1 : 0;
+            const photo = photos[currentPhotoIndex];
+            document.getElementById('lightbox-title').textContent = photo.title;
+            document.getElementById('lightbox-description').textContent = photo.description;
+        }
+
+        // Close lightbox when clicking outside
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Form submissions (demo alerts)
+        document.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('This is a demo form. In a real website, this would submit your information.');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'967d6adc02b23c3e',t:'MTc1Mzk2ODI4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
